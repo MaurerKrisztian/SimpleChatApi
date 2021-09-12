@@ -1,3 +1,3 @@
 #  chat app
 
-### UI: http://localhost:3000/
+### demo: https://simple-chat-mk.herokuapp.com/
