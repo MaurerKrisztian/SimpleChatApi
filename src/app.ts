@@ -1,6 +1,6 @@
 import {MyLogger} from "./Logger";
 import {Server} from "./Server";
-
+require('dotenv/config')
 
 MyLogger.logger.level = "trace"
 
