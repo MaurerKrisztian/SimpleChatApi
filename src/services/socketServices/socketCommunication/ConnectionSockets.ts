@@ -11,7 +11,7 @@ export class ConnectionSockets {
     }
 
     static connect(socket: Socket, user: IChatUser) {
-        socket.emit(Constants.MESSAGE.SEND_MESSAGE, Utils.formatMessage(Constants.CHATBOT_NAME, 'Welcome to SupportLiveChat'));
+        socket.emit(Constants.MESSAGE.SEND_MESSAGE, Utils.formatMessage(Constants.CHATBOT_NAME, 'Welcome! Have a good time!'));
         socket.broadcast.to(user.room).emit(Constants.MESSAGE.SEND_MESSAGE, Utils.formatMessage(Constants.CHATBOT_NAME, user.username + ' has joined the chat')); // send all the client except the current
         MyLogger.trace("client connected");
     }
