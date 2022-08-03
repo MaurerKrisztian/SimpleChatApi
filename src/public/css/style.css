@@ -64,15 +64,29 @@ a {
 }
 
 .chat-main {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
+  min-height: calc(100vh - 188px);
+}
+
+@media (max-width: 725px) {
+  .chat-main{
+    flex-direction: column;
+  }
 }
 
 .chat-sidebar {
   background: var(--dark-color-b);
   color: #fff;
   padding: 20px 20px 60px;
-  overflow-y: scroll;
+  flex: 0 0 15rem;
+}
+
+@media (max-width: 725px) {
+  .chat-sidebar{
+    flex:0;
+    max-height: 200px;
+    overflow: auto;
+  }
 }
 
 .chat-sidebar h2 {
@@ -94,6 +108,7 @@ a {
   padding: 30px;
   max-height: 500px;
   overflow-y: scroll;
+  flex: 1;
 }
 
 .chat-messages .message {
@@ -221,7 +236,7 @@ label {
   border-radius: 0px 5px 5px 0px;
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   .chat-main {
     display: block;
   }
@@ -229,4 +244,4 @@ label {
   .chat-sidebar {
     display: none;
   }
-}
+} */
